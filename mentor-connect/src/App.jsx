@@ -8,7 +8,8 @@ import Testimonials from './components/Testimonials';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
-import { TeacherLogin, StudentLogin } from './components/LoginComponents.jsx'; 
+import { TeacherLogin, StudentLogin } from './components/LoginComponents.jsx';
+import StudentDashboard from './components/StudentDashboard'; // Import StudentDashboard
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(null);
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/about" element={<div className="pt-32 px-8">About Page Content</div>} />
           <Route path="/team" element={<div className="pt-32 px-8">Team Page Content</div>} />
           <Route path="/contact" element={<div className="pt-32 px-8">Contact Page Content</div>} />
+          <Route path="/dashboard" element={<StudentDashboard />} /> {/* Add route for StudentDashboard */}
         </Routes>
         <Footer />
       </div>
