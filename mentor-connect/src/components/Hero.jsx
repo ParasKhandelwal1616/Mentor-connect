@@ -26,7 +26,7 @@ const Hero = () => {
         <div className="md:w-1/2">
           <div className="relative">
             <div className="absolute -top-4 -left-4 w-full h-full bg-gradient-to-r from-teal-500 to-cyan-500 rounded-2xl"></div>
-            <img src="/api/placeholder/500/400" alt="Mentoring Platform" className="relative z-10 rounded-2xl shadow-xl w-full" />
+            <img src="/api/placeholder/500/400" className="relative z-10 rounded-2xl shadow-xl w-full" />
           </div>
         </div>
       </div>
