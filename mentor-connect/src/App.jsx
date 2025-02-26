@@ -8,7 +8,7 @@ import Testimonials from './components/Testimonials';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
-import { TeacherLogin, StudentLogin } from './components/LoginComponents';
+import { TeacherLogin, StudentLogin } from './components/LoginComponents.jsx'; 
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(null);
