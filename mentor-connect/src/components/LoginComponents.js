@@ -53,5 +53,3 @@ export const StudentLogin = () => (
     </form>
   </div>
 );
-
-export default TeacherLogin;
