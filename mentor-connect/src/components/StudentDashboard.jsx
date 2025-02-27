@@ -409,4 +409,155 @@ const StudentDashboard = () => {
                   className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition ${activeTab === 'dashboard' ? 'bg-teal-50 text-teal-600' : 'text-gray-600 hover:bg-gray-100'}`}
                   onClick={() => setActiveTab('dashboard')}
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                  </svg>
+                  <span>Dashboard</span>
+                </button>
+              </li>
+              <li>
+                <button 
+                  className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition ${activeTab === 'assignments' ? 'bg-teal-50 text-teal-600' : 'text-gray-600 hover:bg-gray-100'}`}
+                  onClick={() => setActiveTab('assignments')}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                  <span>Assignments</span>
+                </button>
+              </li>
+              <li>
+                <button 
+                  className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition ${activeTab === 'resources' ? 'bg-teal-50 text-teal-600' : 'text-gray-600 hover:bg-gray-100'}`}
+                  onClick={() => setActiveTab('resources')}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>
+                  <span>Resources</span>
+                </button>
+              </li>
+              <li>
+                <button 
+                  className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition ${activeTab === 'sessions' ? 'bg-teal-50 text-teal-600' : 'text-gray-600 hover:bg-gray-100'}`}
+                  onClick={() => setActiveTab('sessions')}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  <span>Sessions</span>
+                </button>
+              </li>
+              <li>
+                <button 
+                  className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition ${activeTab === 'messages' ? 'bg-teal-50 text-teal-600' : 'text-gray-600 hover:bg-gray-100'}`}
+                  onClick={() => setActiveTab('messages')}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                  <span>Messages</span>
+                </button>
+              </li>
+            </ul>
+            
+            <div className="mt-6 pt-6 border-t border-gray-200">
+              <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Settings</h4>
+              <ul className="mt-3 space-y-1">
+                <li>
+                  <button 
+                    className="w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-100 transition"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span>My Profile</span>
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    className="w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-100 transition"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                    <span>Account Settings</span>
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    className="w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-100 transition"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="8" x2="12" y2="12"></line>
+                      <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    <span>Help Center</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="mt-6 pt-6 border-t border-gray-200">
+              <button 
+                className="w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-red-600 hover:bg-red-50 transition"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                  <polyline points="16 17 21 12 16 7"></polyline>
+                  <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+                <span>Sign Out</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        {/* Main Content */}
+        <div className="flex-1 ml-64 p-8">
+          <div className="max-w-6xl mx-auto">
+            <h1 className="text-2xl font-bold text-gray-800 mb-6">
+              {activeTab === 'dashboard' ? 'My Dashboard' : 
+               activeTab === 'assignments' ? 'My Assignments' : 
+               activeTab === 'resources' ? 'Learning Resources' : 
+               activeTab === 'sessions' ? 'Mentoring Sessions' : 'Messages'}
+            </h1>
+            
+            {/* Tab content */}
+            {activeTab === 'dashboard' && <DashboardHome />}
+            {activeTab === 'assignments' && <Assignments />}
+            {activeTab === 'resources' && <Resources />}
+            {activeTab === 'sessions' && (
+              <div className="bg-white rounded-2xl shadow-md p-6">
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">Upcoming Sessions</h3>
+                <p className="text-gray-600">Sessions component will be implemented soon.</p>
+              </div>
+            )}
+            {activeTab === 'messages' && (
+              <div className="bg-white rounded-2xl shadow-md p-6">
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">Messages</h3>
+                <p className="text-gray-600">Messages component will be implemented soon.</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default StudentDashboard;
