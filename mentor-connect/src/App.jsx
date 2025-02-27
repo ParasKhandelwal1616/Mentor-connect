@@ -10,6 +10,7 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import { TeacherLogin, StudentLogin } from './components/LoginComponents.jsx';
 import StudentDashboard from './components/StudentDashboard'; // Import StudentDashboard
+import TeacherDashboard from './components/TeacherDashboard'; // Import TeacherDashboard
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(null);
@@ -41,7 +42,8 @@ const App = () => {
           <Route path="/about" element={<div className="pt-32 px-8">About Page Content</div>} />
           <Route path="/team" element={<div className="pt-32 px-8">Team Page Content</div>} />
           <Route path="/contact" element={<div className="pt-32 px-8">Contact Page Content</div>} />
-          <Route path="/dashboard" element={<StudentDashboard />} /> {/* Add route for StudentDashboard */}
+          <Route path="/student-dashboard" element={<StudentDashboard />} /> {/* Add route for StudentDashboard */}
+          <Route path="/teacher-dashboard" element={<TeacherDashboard />} />{/* Add route for TeacherDashboard */}
         </Routes>
         <Footer />
       </div>

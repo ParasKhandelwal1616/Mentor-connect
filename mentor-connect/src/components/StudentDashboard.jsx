@@ -401,7 +401,7 @@ const StudentDashboard = () => {
       {/* Sidebar and Main Content */}
       <div className="flex pt-16">
         {/* Sidebar */}
-        <div className="w-64 fixed h-full bg-white shadow-md">
+        <div className="w-64 fixed h-full bg-white shadow-md z-10">
           <div className="p-6">
             <ul className="space-y-1">
               <li>
@@ -409,48 +409,4 @@ const StudentDashboard = () => {
                   className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition ${activeTab === 'dashboard' ? 'bg-teal-50 text-teal-600' : 'text-gray-600 hover:bg-gray-100'}`}
                   onClick={() => setActiveTab('dashboard')}
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-                  </svg>
-                  <span>Dashboard</span>
-                </button>
-              </li>
-              <li>
-                <button 
-                  className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition ${activeTab === 'assignments' ? 'bg-teal-50 text-teal-600' : 'text-gray-600 hover:bg-gray-100'}`}
-                  onClick={() => setActiveTab('assignments')}
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M9 5H3a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1M9 5h6a2 2 0 0 1 2 2v1M9 5v1"></path>
-                  </svg>
-                  <span>Assignments</span>
-                </button>
-              </li>
-              <li>
-                <button 
-                  className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition ${activeTab === 'resources' ? 'bg-teal-50 text-teal-600' : 'text-gray-600 hover:bg-gray-100'}`}
-                  onClick={() => setActiveTab('resources')}
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                  <span>Resources</span>
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-        
-        {/* Main Content */}
-        <div className="flex-1 p-6">
-          {activeTab === 'dashboard' && <DashboardHome />}
-          {activeTab === 'assignments' && <Assignments />}
-          {activeTab === 'resources' && <Resources />}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default StudentDashboard;
-
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="
