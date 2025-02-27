@@ -706,7 +706,6 @@ const TeacherDashboard = () => {
     <div className="space-y-6">
       <div className="bg-white rounded-2xl shadow-md p-6">
         <h3 className="text-xl font-semibold text-gray-800 mb-6">Account Settings</h3>
-        
         <div className="space-y-6">
           {/* Profile Information */}
           <div className="pb-6 border-b border-gray-200">
@@ -716,7 +715,6 @@ const TeacherDashboard = () => {
                 <img src={teacherInfo.avatar} alt="Profile" className="w-32 h-32 rounded-full border-4 border-indigo-100" />
                 <button className="mt-3 text-indigo-600 hover:text-indigo-800 font-medium text-sm">Change Photo</button>
               </div>
-              
               <div className="flex-1 w-full grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
@@ -753,79 +751,12 @@ const TeacherDashboard = () => {
               </div>
             </div>
           </div>
-          
-          {/* Notification Preferences */}
-          <div className="pb-6 border-b border-gray-200">
-            <h4 className="text-lg font-medium text-gray-700 mb-4">Notification Preferences</h4>
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-medium text-gray-800">Email Notifications</p>
-                  <p className="text-sm text-gray-500">Receive emails about student activity and updates</p>
-                </div>
-                <label className="relative inline-flex items-center cursor-pointer">
-                  <input type="checkbox" className="sr-only peer" defaultChecked />
-                  <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
-                </label>
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-medium text-gray-800">Assignment Submissions</p>
-                  <p className="text-sm text-gray-500">Get notified when students submit assignments</p>
-                </div>
-                <label className="relative inline-flex items-center cursor-pointer">
-                  <input type="checkbox" className="sr-only peer" defaultChecked />
-                  <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
-                </label>
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-medium text-gray-800">Session Reminders</p>
-                  <p className="text-sm text-gray-500">Receive reminders before scheduled mentoring sessions</p>
-                </div>
-                <label className="relative inline-flex items-center cursor-pointer">
-                  <input type="checkbox" className="sr-only peer" defaultChecked />
-                  <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
-                </label>
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-medium text-gray-800">Platform Updates</p>
-                  <p className="text-sm text-gray-500">Stay informed about new features and improvements</p>
-                </div>
-                <label className="relative inline-flex items-center cursor-pointer">
-                  <input type="checkbox" className="sr-only peer" />
-                  <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
-                </label>
-              </div>
-            </div>
-          </div>
-          
-          {/* Password Settings */}
-          <div>
-            <h4 className="text-lg font-medium text-gray-700 mb-4">Change Password</h4>
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Current Password</label>
-                <input 
-                  type="password" 
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                  placeholder="••••••••"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">New Password</label>
-                <input 
-                  type="password" 
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                  placeholder="••••••••"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Confirm New Password</label>
-                <input 
-                  type="password" 
-                  className="w-full px-3 py-2 border border-gray-300
+        </div>
+      </div>
+    </div>
+  );
+  
+  
+  };
+  
+  export default TeacherDashboard;
