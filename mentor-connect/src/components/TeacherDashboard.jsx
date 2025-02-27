@@ -425,4 +425,407 @@ const TeacherDashboard = () => {
                     </svg>
                   </button>
                   <button className="p-1 text-indigo-600 hover:bg-indigo-50 rounded-md transition ml-1" title="View Profile">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              
+              <div className="mt-4">
+                <div className="flex justify-between text-sm mb-1">
+                  <span className="text-gray-600">Overall Progress</span>
+                  <span className="text-indigo-600 font-medium">{student.progress}%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div 
+                    className="bg-indigo-600 h-2 rounded-full" 
+                    style={{ width: `${student.progress}%` }}
+                  ></div>
+                </div>
+              </div>
+              
+              <div className="mt-4">
+                <span className="text-sm text-gray-600">Subjects:</span>
+                <div className="flex flex-wrap gap-2 mt-1">
+                  {student.subjects.map((subject, idx) => (
+                    <span key={idx} className="px-2 py-1 bg-indigo-50 text-indigo-600 text-xs rounded-md">
+                      {subject}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="mt-4 flex justify-between items-center">
+                <span className="text-sm text-gray-500">Last active: {student.lastActive}</span>
+                <button className="text-indigo-600 hover:text-indigo-800 font-medium text-sm">
+                  View Details
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      {/* Student Achievement Highlights */}
+      <div className="bg-white rounded-2xl shadow-md p-6">
+        <h3 className="text-xl font-semibold text-gray-800 mb-4">Recent Student Achievements</h3>
+        <div className="space-y-4">
+          <div className="flex items-center gap-4 p-4 bg-yellow-50 rounded-xl border border-yellow-100">
+            <div className="bg-yellow-100 text-yellow-600 p-2 rounded-full h-10 w-10 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 15c2.21 0 4-1.79 4-4 0-2.21-1.79-4-4-4-2.21 0-4 1.79-4 4 0 2.21 1.79 4 4 4z"></path>
+                <path d="M8 21v-2a4 4 0 0 1 4-4"></path>
+                <polyline points="19 8 22 8 22 11"></polyline>
+                <line x1="17" y1="11" x2="22" y2="6"></line>
+              </svg>
+            </div>
+            <div>
+              <div className="flex items-center">
+                <span className="font-medium text-gray-800">Sophia Chen</span>
+                <span className="ml-2 text-sm bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded">Achievement</span>
+              </div>
+              <p className="text-sm text-gray-600">Won first place in Regional Coding Competition</p>
+            </div>
+            <button className="ml-auto text-indigo-600 hover:text-indigo-800 font-medium">Congratulate</button>
+          </div>
+          
+          <div className="flex items-center gap-4 p-4 bg-green-50 rounded-xl border border-green-100">
+            <div className="bg-green-100 text-green-600 p-2 rounded-full h-10 w-10 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div>
+              <div className="flex items-center">
+                <span className="font-medium text-gray-800">Maya Rodriguez</span>
+                <span className="ml-2 text-sm bg-green-100 text-green-700 px-2 py-0.5 rounded">Goal Reached</span>
+              </div>
+              <p className="text-sm text-gray-600">Completed all college application essays ahead of deadline</p>
+            </div>
+            <button className="ml-auto text-indigo-600 hover:text-indigo-800 font-medium">View</button>
+          </div>
+          
+          <div className="flex items-center gap-4 p-4 bg-purple-50 rounded-xl border border-purple-100">
+            <div className="bg-purple-100 text-purple-600 p-2 rounded-full h-10 w-10 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+              </svg>
+            </div>
+            <div>
+              <div className="flex items-center">
+                <span className="font-medium text-gray-800">Ethan Williams</span>
+                <span className="ml-2 text-sm bg-purple-100 text-purple-700 px-2 py-0.5 rounded">Improvement</span>
+              </div>
+              <p className="text-sm text-gray-600">Improved test scores by 25% after mentoring sessions</p>
+            </div>
+            <button className="ml-auto text-indigo-600 hover:text-indigo-800 font-medium">Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const ResourcesTab = () => (
+    <div className="space-y-6">
+      <div className="bg-white rounded-2xl shadow-md p-6">
+        <div className="flex justify-between items-center mb-6">
+          <h3 className="text-xl font-semibold text-gray-800">Teaching Resources</h3>
+          <div className="flex gap-2">
+            <div className="relative">
+              <input 
+                type="text" 
+                placeholder="Search resources..." 
+                className="pl-9 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              />
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-400 absolute left-3 top-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg shadow transition flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+              Upload Resource
+            </button>
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {/* Resource Card 1 */}
+          <div className="border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition">
+            <div className="h-36 bg-indigo-100 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <div className="p-4">
+              <h4 className="font-semibold text-gray-800">Intro to Algorithms - Lesson Plan</h4>
+              <p className="text-gray-500 text-sm mt-1">Comprehensive lesson plan for teaching sorting algorithms</p>
+              <div className="flex items-center mt-3 text-sm text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M2 16V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"></path>
+                  <circle cx="10" cy="12" r="2"></circle>
+                  <path d="M14 12h6"></path>
+                </svg>
+                <span>PDF Document</span>
+                <span className="mx-2">•</span>
+                <span>10 pages</span>
+              </div>
+              <div className="flex justify-between items-center mt-3">
+                <span className="text-sm text-gray-500">Added Feb 24, 2025</span>
+                <button className="text-indigo-600 hover:text-indigo-800 font-medium text-sm">Download</button>
+              </div>
+            </div>
+          </div>
+          
+          {/* Resource Card 2 */}
+          <div className="border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition">
+            <div className="h-36 bg-green-100 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+            </div>
+            <div className="p-4">
+              <h4 className="font-semibold text-gray-800">Computer Science Career Paths</h4>
+              <p className="text-gray-500 text-sm mt-1">Presentation slides for college planning sessions</p>
+              <div className="flex items-center mt-3 text-sm text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                  <polyline points="13 2 13 9 20 9"></polyline>
+                </svg>
+                <span>PowerPoint</span>
+                <span className="mx-2">•</span>
+                <span>24 slides</span>
+              </div>
+              <div className="flex justify-between items-center mt-3">
+                <span className="text-sm text-gray-500">Added Feb 15, 2025</span>
+                <button className="text-indigo-600 hover:text-indigo-800 font-medium text-sm">Download</button>
+              </div>
+            </div>
+          </div>
+          
+          {/* Resource Card 3 */}
+          <div className="border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition">
+            <div className="h-36 bg-blue-100 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div className="p-4">
+              <h4 className="font-semibold text-gray-800">Python Coding Challenges</h4>
+              <p className="text-gray-500 text-sm mt-1">Interactive code exercises for beginners to advanced</p>
+              <div className="flex items-center mt-3 text-sm text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                <span>Interactive</span>
+                <span className="mx-2">•</span>
+                <span>15 challenges</span>
+              </div>
+              <div className="flex justify-between items-center mt-3">
+                <span className="text-sm text-gray-500">Added Feb 20, 2025</span>
+                <button className="text-indigo-600 hover:text-indigo-800 font-medium text-sm">Open</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Recommended Resources */}
+      <div className="bg-white rounded-2xl shadow-md p-6">
+        <h3 className="text-xl font-semibold text-gray-800 mb-4">Recommended for You</h3>
+        <div className="space-y-3">
+          <div className="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg cursor-pointer transition">
+            <div className="bg-purple-100 text-purple-600 p-2 rounded-lg h-10 w-10 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"></path>
+                <path d="M16.5 9.4L7.55 4.24"></path>
+                <polyline points="3.29 7 12 12 20.71 7"></polyline>
+                <line x1="12" y1="22" x2="12" y2="12"></line>
+                <circle cx="18.5" cy="15.5" r="2.5"></circle>
+                <path d="M20.27 17.27L22 19"></path>
+              </svg>
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="font-medium text-gray-800">AI in Education: A Teacher's Guide</p>
+              <p className="text-gray-500 text-sm">Practical ways to incorporate AI tools in the classroom</p>
+            </div>
+            <button className="text-indigo-600 hover:text-indigo-800 font-medium">View</button>
+          </div>
+          
+          <div className="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg cursor-pointer transition">
+            <div className="bg-yellow-100 text-yellow-600 p-2 rounded-lg h-10 w-10 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="font-medium text-gray-800">Student Engagement Strategies</p>
+              <p className="text-gray-500 text-sm">Research-backed techniques for improving participation</p>
+            </div>
+            <button className="text-indigo-600 hover:text-indigo-800 font-medium">View</button>
+          </div>
+          
+          <div className="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg cursor-pointer transition">
+            <div className="bg-green-100 text-green-600 p-2 rounded-lg h-10 w-10 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+              </svg>
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="font-medium text-gray-800">Advanced Data Structures Tutorial Series</p>
+              <p className="text-gray-500 text-sm">Video tutorials for teaching complex programming concepts</p>
+            </div>
+            <button className="text-indigo-600 hover:text-indigo-800 font-medium">View</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const SettingsTab = () => (
+    <div className="space-y-6">
+      <div className="bg-white rounded-2xl shadow-md p-6">
+        <h3 className="text-xl font-semibold text-gray-800 mb-6">Account Settings</h3>
+        
+        <div className="space-y-6">
+          {/* Profile Information */}
+          <div className="pb-6 border-b border-gray-200">
+            <h4 className="text-lg font-medium text-gray-700 mb-4">Profile Information</h4>
+            <div className="flex flex-col md:flex-row items-start gap-6">
+              <div className="flex flex-col items-center">
+                <img src={teacherInfo.avatar} alt="Profile" className="w-32 h-32 rounded-full border-4 border-indigo-100" />
+                <button className="mt-3 text-indigo-600 hover:text-indigo-800 font-medium text-sm">Change Photo</button>
+              </div>
+              
+              <div className="flex-1 w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                  <input 
+                    type="text" 
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    defaultValue={teacherInfo.name}
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                  <input 
+                    type="email" 
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    defaultValue="sarah.williams@westview.edu"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Department</label>
+                  <input 
+                    type="text" 
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    defaultValue={teacherInfo.department}
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">School</label>
+                  <input 
+                    type="text" 
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    defaultValue={teacherInfo.school}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Notification Preferences */}
+          <div className="pb-6 border-b border-gray-200">
+            <h4 className="text-lg font-medium text-gray-700 mb-4">Notification Preferences</h4>
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="font-medium text-gray-800">Email Notifications</p>
+                  <p className="text-sm text-gray-500">Receive emails about student activity and updates</p>
+                </div>
+                <label className="relative inline-flex items-center cursor-pointer">
+                  <input type="checkbox" className="sr-only peer" defaultChecked />
+                  <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+                </label>
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="font-medium text-gray-800">Assignment Submissions</p>
+                  <p className="text-sm text-gray-500">Get notified when students submit assignments</p>
+                </div>
+                <label className="relative inline-flex items-center cursor-pointer">
+                  <input type="checkbox" className="sr-only peer" defaultChecked />
+                  <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+                </label>
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="font-medium text-gray-800">Session Reminders</p>
+                  <p className="text-sm text-gray-500">Receive reminders before scheduled mentoring sessions</p>
+                </div>
+                <label className="relative inline-flex items-center cursor-pointer">
+                  <input type="checkbox" className="sr-only peer" defaultChecked />
+                  <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+                </label>
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="font-medium text-gray-800">Platform Updates</p>
+                  <p className="text-sm text-gray-500">Stay informed about new features and improvements</p>
+                </div>
+                <label className="relative inline-flex items-center cursor-pointer">
+                  <input type="checkbox" className="sr-only peer" />
+                  <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          {/* Password Settings */}
+          <div>
+            <h4 className="text-lg font-medium text-gray-700 mb-4">Change Password</h4>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Current Password</label>
+                <input 
+                  type="password" 
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  placeholder="••••••••"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">New Password</label>
+                <input 
+                  type="password" 
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  placeholder="••••••••"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Confirm New Password</label>
+                <input 
+                  type="password" 
+                  className="w-full px-3 py-2 border border-gray-300
